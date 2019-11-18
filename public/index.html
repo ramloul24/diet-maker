@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Data</title>
+</head>
+<body>
+    <h1>Personal Details:</h1>
+    <form method="POST" action="/post-details">
+        <label>Name:<input type="text" name="name" required></label>
+        <br>
+        <label>Email:<input type="text" name="email" required></label>
+        <br>
+        <label> Gender:
+            <input type="checkbox" name="gender" value="Male">Male
+            <input type="checkbox" name="gender" value="Female">Female 
+            <br>
+        </label>
+        <label>Birth date:
+            <input type="date" name="dob">
+        </label>
+        <br>
+        <label>Height (in cm):<input type="text" name="height" required></label>
+        <br>
+        <label>Weight (in kg):<input type="text" name="weight" required></label>
+        <br>
+        <label>Which diet are you following?
+            <select name="diet" size="3">
+                <option>Pesceterian</option>
+                <option>Lacto Vegeterian</option>
+                <option>Ovo Vegeterian</option>
+                <option>Vegan</option>
+                <option>Paleo</option>
+                <option>Primal</option>
+                <option>Vegeterian</option>
+              </select>
+        </label>
+        <br>
+        <label>Do you have any intolerances? (Select as many as you wish)
+            <select data-placeholder="None" multiple class="chosen-select" name="intolerances">
+                <option value=""></option>
+                <option>Dairy</option>
+                <option>Egg</option>
+                <option>Gluten</option>
+                <option>Peanut</option>
+                <option>Sesame</option>
+                <option>Seafood</option>
+                <option>Shellfish</option>
+                <option>Soy</option>
+                <option>Sulfite</option>
+                <option>Tree Nut</option>
+                <option>Wheat</option>
+            </select>
+        </label>
+        <br>
+        <label>Activity Level
+                <select name="level" size="3">
+                    <option>Sedentary</option>
+                    <option>Low Active</option>
+                    <option>Active</option>
+                    <option>Very Active</option>
+                  </select>
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/view-details">View details</a>
+</body>
+</html>
